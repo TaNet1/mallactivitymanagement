@@ -17,6 +17,7 @@
  *     passValue: string,                // 传参值（必填，同时作为左侧 Tab 名称）
  *     title: string,                    // 标题（必填）
  *     duration: string,                 // 持续时间（自由文本，如 2026.06.01-2026.06.22）
+ *     delistAt: string,                 // 下架日期（选填，YYYY-MM-DD HH:mm:ss；为空表示不下架）
  *     cover: { url, name } | null,      // 封面（仅单张）
  *     images: { url, name }[],          // 轮播区域图片（可多张）
  *     markdown: string                  // Markdown 正文
@@ -46,6 +47,7 @@ function emptyLangContent(passValue) {
     passValue,
     title: '',
     duration: '',
+    delistAt: '',
     cover: null,
     images: [],
     markdown: ''
@@ -70,6 +72,7 @@ export function createMockConfig() {
     passValue: '暑期狂欢',
     title: '暑期狂欢购物节',
     duration: '2026.06.01-2026.06.22',
+    delistAt: '',
     cover: null,
     images: [],
     markdown: '## 暑期狂欢购物节\n\n这个区域是 Markdown 编辑区域。'
@@ -78,6 +81,7 @@ export function createMockConfig() {
     passValue: '暑期狂歡',
     title: '暑期狂歡購物節',
     duration: '2026.06.01-2026.06.22',
+    delistAt: '',
     cover: null,
     images: [],
     markdown: '## 暑期狂歡購物節\n\n這個區域是 Markdown 編輯區域。'
@@ -86,6 +90,7 @@ export function createMockConfig() {
     passValue: 'Summer Carnival',
     title: 'Summer Carnival Shopping Festival',
     duration: '2026.06.01-2026.06.22',
+    delistAt: '',
     cover: null,
     images: [],
     markdown: '## Summer Carnival\n\nThis is the Markdown editing area.'

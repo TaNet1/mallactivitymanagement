@@ -31,6 +31,21 @@
       />
     </div>
 
+    <!-- 下架日期（选填，不填则不下架） -->
+    <div class="field">
+      <label class="lbl">下架日期</label>
+      <el-date-picker
+        v-model="content.delistAt"
+        type="datetime"
+        placeholder="不填则不下架"
+        value-format="YYYY-MM-DD HH:mm:ss"
+        format="YYYY-MM-DD HH:mm:ss"
+        clearable
+        style="width: 320px"
+      />
+      <p class="tip">不填写则该活动不会自动下架。</p>
+    </div>
+
     <!-- 封面 + 轮播区域图片（左右并排） -->
     <div class="img-row">
       <div class="img-col">
@@ -82,6 +97,11 @@ defineProps({
 .req {
   color: #f25b5b;
   margin-right: 2px;
+}
+.tip {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #9aa1ab;
 }
 
 .img-row {
