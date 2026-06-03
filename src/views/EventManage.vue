@@ -49,6 +49,7 @@
           v-else
           :key="currentTabId + '_' + currentLang"
           :content="currentContent"
+          :tab="currentTab"
         />
       </div>
     </div>

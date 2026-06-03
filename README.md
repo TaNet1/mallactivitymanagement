@@ -58,6 +58,7 @@ EventConfig {
 }
 Tab {
   id: string
+  delistAt: string            // 下架日期（Tab 级，三语言共享；选填，YYYY-MM-DD HH:mm:ss；为空表示不下架）
   i18n: {                     // 三语言内容独立维护，Tab 结构在多语言间共享
     'zh-CN': LangContent
     'zh-TW': LangContent
@@ -68,7 +69,6 @@ LangContent {
   passValue: string           // 传参值（必填，同时作为左侧 Tab 名称）
   title: string               // 标题（选填）
   duration: string            // 持续时间（自由文本，如 2026.06.01-2026.06.22）
-  delistAt: string            // 下架日期（选填，YYYY-MM-DD HH:mm:ss；为空表示不下架）
   cover: { url, name } | null  // 封面（必填，仅单张）
   images: { url, name }[]     // 轮播区域图片（可多张）
   markdown: string            // Markdown 正文

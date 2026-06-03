@@ -31,11 +31,11 @@
       />
     </div>
 
-    <!-- 下架日期（选填，不填则不下架） -->
+    <!-- 下架日期（选填，不填则不下架；Tab 级，三语言共享） -->
     <div class="field">
       <label class="lbl">下架日期</label>
       <el-date-picker
-        v-model="content.delistAt"
+        v-model="tab.delistAt"
         type="datetime"
         placeholder="不填则不下架"
         value-format="YYYY-MM-DD HH:mm:ss"
@@ -43,7 +43,7 @@
         clearable
         style="width: 320px"
       />
-      <p class="tip">不填写则该活动不会自动下架。</p>
+      <p class="tip">不填写则该活动不会自动下架；该日期三种语言共享。</p>
     </div>
 
     <!-- 封面 + 轮播区域图片（左右并排） -->
@@ -79,8 +79,10 @@ import VditorEditor from './VditorEditor.vue'
 
 // content 为当前 Tab + 当前语言对应的内容对象（来自父级响应式状态）。
 // v-model 直接绑定其嵌套字段，编辑即写回该语言版本，切换不丢失。
+// tab 为当前 Tab 对象，承载「下架日期」等三语言共享的 Tab 级字段。
 defineProps({
-  content: { type: Object, required: true }
+  content: { type: Object, required: true },
+  tab: { type: Object, required: true }
 })
 </script>
 
