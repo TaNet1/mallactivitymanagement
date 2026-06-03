@@ -29,7 +29,7 @@
         v-model="content.description"
         type="textarea"
         :autosize="{ minRows: 3, maxRows: 8 }"
-        maxlength="500"
+        maxlength="100"
         show-word-limit
         placeholder="请输入活动描述"
       />
