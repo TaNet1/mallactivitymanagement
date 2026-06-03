@@ -22,12 +22,16 @@
       />
     </div>
 
-    <!-- 持续时间 -->
+    <!-- 活动描述 -->
     <div class="field">
-      <label class="lbl">持续时间</label>
+      <label class="lbl">活动描述</label>
       <el-input
-        v-model="content.duration"
-        placeholder="例如：2026.06.01-2026.06.22"
+        v-model="content.description"
+        type="textarea"
+        :autosize="{ minRows: 3, maxRows: 8 }"
+        maxlength="500"
+        show-word-limit
+        placeholder="请输入活动描述"
       />
     </div>
 

@@ -34,7 +34,7 @@ src/
    ├─ Sidebar.vue          左侧导航（静态写死，仅作框架展示）
    ├─ TopBar.vue           顶栏（静态）
    ├─ LeftPanel.vue        左侧操作栏：模块 Tab 管理（拖拽排序）
-   ├─ ContentEditor.vue    内容编辑区：传参值 / 标题 / 持续时间 / 封面 / 轮播图 / 正文
+   ├─ ContentEditor.vue    内容编辑区：传参值 / 标题 / 活动描述 / 下架日期 / 封面 / 轮播图 / 正文
    ├─ ImageUploader.vue    图片上传（单张封面 / 多张轮播复用，jpg/jpeg/png，≤5MB）
    └─ VditorEditor.vue     Vditor 封装组件
 ```
@@ -68,7 +68,7 @@ Tab {
 LangContent {
   passValue: string           // 传参值（必填，同时作为左侧 Tab 名称）
   title: string               // 标题（选填）
-  duration: string            // 持续时间（自由文本，如 2026.06.01-2026.06.22）
+  description: string         // 活动描述（多行文本）
   cover: { url, name } | null  // 封面（必填，仅单张）
   images: { url, name }[]     // 轮播区域图片（可多张）
   markdown: string            // Markdown 正文
