@@ -1,0 +1,22 @@
+{
+  "name": "mall-event-management",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "商场活动管理 - 前端原型（Vue3 + Vite + Element Plus + Vditor）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.7.6",
+    "vditor": "^3.10.6",
+    "vue": "^3.4.31"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "vite": "^5.3.3"
+  }
+}

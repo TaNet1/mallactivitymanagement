@@ -1,0 +1,99 @@
+:root {
+  /* 主色：与「保存并生效」按钮、选中态一致 */
+  --el-color-primary: #2f6bff;
+  --el-color-primary-light-3: #5a8aff;
+  --el-color-primary-light-5: #88a9ff;
+  --el-color-primary-light-7: #b6c9ff;
+  --el-color-primary-light-9: #e9efff;
+
+  --sidebar-bg: #161d2e;
+  --sidebar-header-bg: #11182a;
+  --sidebar-text: #c4ccd8;
+  --sidebar-active: #2f6bff;
+  --topbar-h: 52px;
+  --left-panel-w: 230px;
+  --sidebar-w: 200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Microsoft YaHei', sans-serif;
+  color: #1f2329;
+  background: #f5f6f8;
+}
+
+/* ---------------- 整体布局 ---------------- */
+.app {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.page {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  background: #fff;
+}
+
+/* 左侧操作栏 */
+.left-panel {
+  width: var(--left-panel-w);
+  flex-shrink: 0;
+  border-right: 1px solid #ebedf0;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fcfcfd;
+}
+
+/* 内容编辑区 */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.content-body {
+  flex: 1;
+  overflow: auto;
+  padding: 22px 24px 40px;
+}
+
+/* 滚动条轻量化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d9de;
+  border-radius: 4px;
+}
